@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+  <meta charset="UTF-8">
+  <title>TOR HTML Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <style>
+  :root {
+  --color: #666;
+  --bgc: #fff;
+  --a: #333;
+  --hc: #FFF;
+  --hbgc: #333;
+  }
+
+  ::-moz-selection {
+  background-color: var(--hbgc);
+  color: var(--hc);
+  }
+
+  ::selection {
+  background-color: var(--hbgc);
+  color: var(--hc);
+  }
+
+  html {
+  font: 400 100%/1.8em Lato, sans-serif;
+  }
+
+  body {
+  margin: 0;
+  padding: 0;
+  color: var(--color);
+  background: var(--bgc);
+  width: 100%;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  text-transform: capitalize;
+  }
+
+  ul {
+  display: inherit;
+  list-style: none;
+  }
+
+  a, a:visited, a:active, a:link, a:hover {
+  text-decoration: none;
+  color: var(--a);
+  text-transform: uppercase;
+  transition: all .5s;
+  }
+
+  input[type="text"], input[type="radio"], input[type="submit"], button {
+  outline: none;
+  border: none;
+  }
+
+  p {
+  text-transform: lowercase;
+  }
+  p:first-of-type:first-letter {
+  text-transform: uppercase;
+  }
+
+  .grid {
+  display: grid;
+  grid-column: 2/4;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 25rem)) 1fr;
+  }
+
+  .grid2 {
+  display: grid;
+  grid-template-columns: [xl-start] 1fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+  }
+
+  .grid2 * {
+  grid-column: md;
+  }
+
+  .grid2-xl {
+  grid-column: xl;
+  }
+
+  .cf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+
+  .ct {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  }
+
+  .ol {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("") center/cover no-repeat fixed;
+  }
+
+  .full {
+  max-height: 100%;
+  height: 100vh;
+  width: 100%;
+  }
+
+  .al {
+  text-align: left;
+  }
+
+  .ac {
+  text-align: center;
+  }
+
+  .aj {
+  text-align: justify;
+  }
+
+  .row {
+  display: flex;
+  flex-wrap: wrap;
+  }
+  .row > * {
+  flex: 1;
+  }
+
+  .png1, .png2, .png3 {
+  position: relative;
+  opacity: .7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  }
+
+  .png1 {
+  background-image: url("https://images.pexels.com/photos/1139541/pexels-photo-1139541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  min-height: 100vh;
+  }
+
+  .png2 {
+  background-image: url("https://images.pexels.com/photos/9044/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940\a");
+  min-height: 400px;
+  }
+
+  .png3 {
+  background-image: url("https://images.pexels.com/photos/462331/pexels-photo-462331.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  min-height: 400px;
+  }
+
+  .section {
+  text-align: center;
+  padding: 50px 80px;
+  }
+  .section-light {
+  background-color: #f4f4f4;
+  color: #666;
+  }
+  .section-dark {
+  background-color: #282e34;
+  color: #ddd;
+  }
+
+  .ptext {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  }
+  .ptext .bd {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  }
+  .ptext .bd.trans {
+  background-color: transparent;
+  }
+
+  @media (max-width: 568px) {
+  .png1, .png2, .png3 {
+  background-attachment: scroll;
+  }
+  }
+
+  </style>
+
+</head>
+
+<body translate="no" >
+
+<div class="png1">
+	<div class="ptext">
+		<span class="bd">
+			TOR HTML Site
+		</span>
+	</div>
+</div>
+<section class="section section-light">
+	<h2>Lorem, ipsum.</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, necessitatibus, ipsa labore vel autem minima delectus reiciendis ab recusandae officia, architecto magni! Accusamus quis inventore animi laudantium, quas laboriosam id?</p>
+</section>
+<div class="png2">
+	<div class="ptext">
+		<span class="bd trans">
+			Lorem, ipsum.
+		</span>
+	</div>
+</div>
+<section class="section section-dark">
+	<h2>Lorem, ipsum.</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, necessitatibus, ipsa labore vel autem minima delectus reiciendis ab recusandae officia, architecto magni! Accusamus quis inventore animi laudantium, quas laboriosam id?</p>
+</section>
+<div class="png3">
+	<div class="ptext">
+		<span class="bd trans">
+			Lorem, ipsum.
+		</span>
+	</div>
+</div>
+<section class="section section-dark">
+	<h2>Lorem, ipsum.</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, necessitatibus, ipsa labore vel autem minima delectus reiciendis ab recusandae officia, architecto magni! Accusamus quis inventore animi laudantium, quas laboriosam id?</p>
+</section>
+<div class="png1">
+	<div class="ptext">
+		<span class="bd">
+			Lorem, ipsum.
+		</span>
+	</div>
+</div>
+</body>
+
+</html>
+ 
